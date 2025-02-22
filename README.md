@@ -20,13 +20,13 @@ JourneyHub is a travel planning web application that allows users to explore pop
 
 ### Development
 
-1. Run Gulp to compile SCSS, transpile and minify JS, copy images, and start the local server:
+1. Start the development server:
 
    ```sh
-   npm run gulp
+   npm start
    ```
 
-2. Open your browser and go to [http://localhost:3000](http://localhost:3000) to view the project.
+2. Open your browser and go to [http://localhost:8080](http://localhost:8080) to view the project.
 
 ### Build
 
@@ -44,15 +44,14 @@ The project is automatically deployed to GitHub Pages when pushing to the `main`
 
 ## Project Structure
 
-- `css/` - SCSS style files.
+- `src/` - Source files.
+  - `css/` - SCSS style files.
+  - `images/` - Images.
+  - `js/` - JavaScript files.
+  - `index.html` - Main HTML page.
 - `dist/` - Project build.
-- `fonts/` - Fonts.
-- `images/` - Images.
-- `js/` - JavaScript files.
-- `scripts/` - Node.js scripts.
-- `gulpfile.js` - Gulp configuration.
+- `webpack.config.js` - Webpack configuration.
 - `package.json` - Project dependencies and scripts.
-- `index.html` - Main HTML page.
 
 ## Contribution
 
