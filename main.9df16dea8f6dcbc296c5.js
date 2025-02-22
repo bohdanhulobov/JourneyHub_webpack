@@ -1,0 +1,2 @@
+(()=>{"use strict";function o(){var o=document.querySelector(".promo-banner");o.classList.add("show"),o.style.display="block"}window.showBanner=o,window.hideBanner=function(){var o=document.querySelector(".promo-banner");o.classList.remove("show"),setTimeout((function(){o.style.display="none"}),500)},window.onload=function(){setTimeout(o,2e3)}})();
+//# sourceMappingURL=main.9df16dea8f6dcbc296c5.js.map
