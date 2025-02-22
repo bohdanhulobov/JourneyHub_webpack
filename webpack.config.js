@@ -7,12 +7,19 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default {
-  entry: "./src/main.js",
+  entry: {
+    main: "./src/main.js",
+  },
   devtool: "source-map",
   output: {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
   },
   module: {
     rules: [
@@ -39,6 +46,16 @@ export default {
         type: "asset/resource",
         generator: {
           filename: "images/[name][hash][ext]",
+        },
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
         },
       },
     ],
